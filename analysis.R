@@ -9,3 +9,6 @@ df %>% group_by(group) %>%
   summarise(mean = mean(x),
             n = length(n),
             sd = sd(x))
+
+df %>% ggplot(aes(x = group, y = x)) +
+      geom_boxplot()
